@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /textsearch/api
+  port: 8082
+spring:
+  elasticsearch:
+    rest:
+      uris: localhost:9200
+  jpa:
+    properties:
+      hibernate:
+        search:
+          default:
+            indexmanager: elasticsearch
+            elasticsearch:
+              host: http://localhost:9200
+              index_schema_management_strategy: drop-and-create
+              required_index_status: yellow
+logging:
+  level:
+    tracer: TRACE
