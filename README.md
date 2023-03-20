@@ -6,7 +6,7 @@
   `docker run -p 9200:9200 -e 'discovery.type=single-node' -e 'http.publish_host=localhost' -e 'http.publish_port=9200' -e
   'xpack.security.enabled=false' docker.elastic.co/elasticsearch/elasticsearch:8.6.2`
 
-* Create an index by hitting this API once the server has started: PUT http://localhost/document
+* Create an index by hitting this API once the server has started: PUT http://localhost:9200/document
 
   `{
   "mappings": {
